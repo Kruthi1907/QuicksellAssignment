@@ -12,7 +12,6 @@ const TaskBoard = () => {
     InProgressTasks,
     DoneTasks,
     CancelledTasks,
-    UserData, // Fetch the user data to map userId to userName
   } = useTaskData();
 
   const [grouping, setGrouping] = useState(localStorage.getItem("grouping") || "Status");
