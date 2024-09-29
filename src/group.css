@@ -1,0 +1,13 @@
+.head {
+    min-width: fit-content;
+    max-width: 16vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 0vw 1vh 0vw;
+}
+
+.left, .right {
+    display: flex;
+    gap: 0.5vw;
+}

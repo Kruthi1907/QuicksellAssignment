@@ -1,0 +1,47 @@
+.profile {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: black;
+}
+.task-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.task-card p {
+  margin: 0;
+  color: #555;
+}
+.header, .bottom {
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+
+.bottom{
+    gap: 1vw;
+    margin-top: 1vh;
+}
+
+.dot{
+    height: 10px;
+    width: 10px;
+    background-color: rgb(165, 165, 165);
+    border-radius: 50%;
+}
+
