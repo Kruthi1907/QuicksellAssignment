@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const useTaskData = () => {
   const [TaskData, setTaskData] = useState([]); // Data of tasks
-  const [UserData, setUserData] = useState([]); // Data of users]
+  const [UserData, setUserData] = useState([]); // Data of users
 
   useEffect(() => {
     fetch("https://api.quicksell.co/v1/internal/frontend-assignment")
@@ -27,21 +27,27 @@ const useTaskData = () => {
   const DoneTasks = TaskData.filter((task) => task.status === "Done");
   const CancelledTasks = TaskData.filter((task) => task.status === "Cancelled");
 
-  // Filters by priority
-  const priority0 = TaskData.filter((task) => task.priority === 0);
-  const priority1 = TaskData.filter((task) => task.priority === 1);
-  const priority2 = TaskData.filter((task) => task.priority === 2);
-  const priority3 = TaskData.filter((task) => task.priority === 3);
-  const priority4 = TaskData.filter((task) => task.priority === 4);
-
   const priorityImages = {
-    "1": "Img - Low Priority.svg",
-    "2": "Img - Medium Priority.svg",
-    "0": "No-priority.svg",
-    "3": "Img - High Priority.svg",
-    "4": "SVG - Urgent Priority grey.svg",
-    "5": "SVG - Urgent Priority colour.svg",
+    0: "0.svg",
+    1: "1.svg",
+    2: "2.svg",
+    3: "3.svg",
+    4: "5.svg",
+    5: "4.svg",
   };
+
+  const priorityNames = {
+    0: "No priotity",
+    1: "Low priotity",
+    2: "Medium priotity",
+    3: "High priotity",
+    4: "Urgent",
+  }
+
+  const userNames = UserData.reduce((acc, user) => {
+    acc[user.id] = user.name;
+    return acc;
+  }, {});
 
   // Return all the data and filters
   return {
@@ -52,12 +58,9 @@ const useTaskData = () => {
     InProgressTasks,
     DoneTasks,
     CancelledTasks,
-    priority0,
-    priority1,
-    priority2,
-    priority3,
-    priority4,
-    priorityImages
+    priorityImages,
+    userNames,
+    priorityNames
   };
 };
 
