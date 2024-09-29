@@ -6,14 +6,14 @@ const Group = ({ name, pic, tasks = [] }) => {
   return (
     <div className="head">
       <div className="left">
-        <img src={pic} />
+        <img src={pic} alt="none"/>
         <span>
           {name} {count}
         </span>
       </div>
       <div className="right">
-        <img src={"add.svg"} />
-        <img src="3 dot menu.svg" />
+        <img src={"add.svg"} alt="none"/>
+        <img src="3 dot menu.svg" alt="none"/>
       </div>
     </div>
   );

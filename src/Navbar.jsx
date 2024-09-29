@@ -26,9 +26,9 @@ const Navbar = () => {
     <div className="Nav">
       <div class="dropdown" ref={dropdownRef}>
         <button class="dropdown-btn" onClick={dropdownClicked}>
-          <img src="Display.svg" height={"15px"} />
+          <img src="Display.svg" height={"15px"} alt="none"/>
           <span>Display</span>
-          <img src="down.svg" height={"15px"} />
+          <img src="down.svg" height={"15px"} alt="none"/>
         </button>
         {Open && (
           <div class="dropdown-content">

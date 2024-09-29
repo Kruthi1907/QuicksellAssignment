@@ -13,7 +13,7 @@ const TaskCard = ({ task }) => {
       </div>
       <p style={{ fontWeight: "bold", color: "black" }}>{task.title} </p>
       <div className="bottom">
-        <img src={priorityImages[task.priority]}></img>
+        <img src={priorityImages[task.priority]} alt="none"></img>
         <p style={{display: "flex", alignItems: "center", gap: "0.3vw"}}><div className="dot"></div>{task.tag}</p>
       </div>
     </div>
